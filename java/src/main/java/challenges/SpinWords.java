@@ -35,4 +35,16 @@ public class SpinWords {
 
         return finalString.toString().trim();
     }
+
+    public static String spinWordsAlternative(String sentence){
+
+        for (String word : sentence.split(" ")) {
+
+            if (word.length() >= 5){
+                sentence = sentence.replace(word, new StringBuilder(word).reverse());
+            }
+        }
+
+        return sentence;
+    }
 }
