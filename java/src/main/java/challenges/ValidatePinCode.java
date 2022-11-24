@@ -14,4 +14,8 @@ public class ValidatePinCode {
 
         return matcher.find();
     }
+
+    private static boolean validatePinAlternative(String pin) {
+        return pin.matches("\\d{4}|\\d{6}");
+    }
 }
