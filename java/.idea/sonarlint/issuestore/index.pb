@@ -15,3 +15,9 @@ W
 'src/main/java/challenges/SpinWords.java,5\e\5eb3cc26cc3089bab1d56be66ea382b871a8fd69
 Y
 )src/main/java/challenges/SquareDigit.java,6\3\63b6adee73c2325f54ab1c5414db5b22666ebec8
+]
+-src/main/java/challenges/ValidatePinCode.java,1\c\1cab376ebf990aa61f7ee5b8d100d6af4bacffeb
+`
+0src/main/java/challenges/UsernameValidation.java,c\8\c8b76281af5304d6b431371c69dc6f3f189274f5
+\
+,src/main/java/challenges/BracketMatcher.java,b\f\bfd67c59266bf702a49f80b0f786e8aa6c15300e
