@@ -19,6 +19,10 @@ public class VowelCount {
 
         return count;
     }
+    
+    public static int getCountBestPractices(String str) {
+        return str.replaceAll("[^aeiou]", "").length();
+    }
 
     public static void main(String[] args) {
         System.out.println("5 - " + getCount("abracadabra"));
