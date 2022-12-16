@@ -67,6 +67,10 @@ public class TheCullingOfStratholme {
     public static boolean isClear(char i){
         return i != 'i' && i != 'I';
     }
+
+    public static String purifyBestPractices(String s){
+        return s.replaceAll("[^iI]?[iI][^iI]", "").replaceAll("\\s+", " ").trim();
+    }
     
     public static void main(String[] args) {
         System.out.println("Stg - " + purify("String"));
