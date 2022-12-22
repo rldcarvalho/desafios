@@ -1,10 +1,8 @@
 package challenges;
 
-import java.util.Arrays;
-
 public class DigitalRoot {
 
-    public static int digital_root(int n) {
+    public static int digitalRoot(int n) {
 
         String temp = Integer.toString(n);
         int[] nArr = new int[String.valueOf(n).length()];
@@ -18,7 +16,14 @@ public class DigitalRoot {
             sum += i;
         }
 
-        return (sum < 10) ? sum : digital_root(sum);
+        return (sum < 10) ? sum : digitalRoot(sum);
+    }
+
+    public static int digitalRootBestPractices(int n){
+        while (n > 9){
+            n = n / 10 + n % 10;
+        }
+        return n;
     }
 
 }
