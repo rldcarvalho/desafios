@@ -40,4 +40,22 @@ public class CountingDuplicates {
         return occurs;
     }
 
+    public static int duplicateCountBestPractices(String text){
+
+        text = text.toLowerCase();
+
+        int ans = 0;
+        while (text.length() > 0){
+            String firstLetter = text.substring(0, 1);
+            text = text.substring(1);
+
+            if(text.contains(firstLetter)) ans++;
+
+            text = text.replace(firstLetter, "");
+        }
+
+        return ans;
+
+    }
+
 }
