@@ -13,6 +13,8 @@ Should return: 11 (the only odd number)
 Should return: 160 (the only even number)
  */
 
+import java.util.Arrays;
+
 public class FindTheParityOutlier {
 
     static int find(int[] integers){
@@ -29,4 +31,14 @@ public class FindTheParityOutlier {
 
         return 0;
     }
+
+    static int findBestPractices(int[] integers){
+
+        int sum = Arrays.stream(integers).limit(3).map(i -> Math.abs(i) % 2).sum();
+        int mod = (sum == 0 || sum == 1) ? 1 : 0;
+
+        return Arrays.stream(integers).parallel().filter(n -> Math.abs(n) % 2 == mod).findFirst().getAsInt();
+    }
+
+
 }
