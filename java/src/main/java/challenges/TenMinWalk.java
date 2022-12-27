@@ -35,6 +35,13 @@ public class TenMinWalk {
         }
 
         return (xAxis == 0 && yAxis == 0);
+    }
 
+    public static boolean isValidClever(char[] walk) {
+
+        String s = new String(walk);
+        return s.chars().filter(p -> p == 'n').count() == s.chars().filter(p -> p == 's').count()
+                && s.chars().filter(p -> p == 'e').count() == s.chars().filter(p -> p == 'w').count()
+                && s.chars().count() == 10;
     }
 }
