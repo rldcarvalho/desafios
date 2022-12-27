@@ -31,4 +31,17 @@ public class PersistentBugger {
         return count;
     }
 
+    public static int persistenceBestPractices(long n) {
+
+        if (n / 10 == 0) return 0;
+
+        long m = 1;
+        long r;
+
+        for (r = n; r != 0; r /= 10)
+            m *= r % 10;
+
+        return persistenceBestPractices(m) + 1;
+    }
+
 }
