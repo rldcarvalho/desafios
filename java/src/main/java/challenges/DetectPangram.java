@@ -24,4 +24,20 @@ public class DetectPangram {
 
         return temp.length() == 26;
     }
+
+    public static boolean checkBestPractices(String sentence){
+
+        for (char c = 'a'; c <= 'z'; c++){
+            if (!sentence.toLowerCase().contains("" + c)){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static boolean checkBestClever(String sentence){
+
+        return sentence.chars().map(Character::toLowerCase).filter(Character::isAlphabetic).distinct().count() == 26;
+    }
+
 }
