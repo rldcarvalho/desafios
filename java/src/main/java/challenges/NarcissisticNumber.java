@@ -22,6 +22,8 @@ will be passed into the function.
 
  */
 
+import java.util.Arrays;
+
 public class NarcissisticNumber {
 
     public static boolean isNarcissistic(int number) {
@@ -36,5 +38,13 @@ public class NarcissisticNumber {
         }
 
         return sum == number;
+    }
+
+    public static boolean isNarcissisticClever(int number) {
+
+        int digits = String.valueOf(number).length();
+
+        return number == Arrays.stream(String.valueOf(number).split(""))
+                .mapToInt(Integer::parseInt).mapToDouble(m -> Math.pow(m, digits)).sum();
     }
 }
