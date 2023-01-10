@@ -21,3 +21,11 @@ Y
 0src/main/java/challenges/UsernameValidation.java,c\8\c8b76281af5304d6b431371c69dc6f3f189274f5
 \
 ,src/main/java/challenges/BracketMatcher.java,b\f\bfd67c59266bf702a49f80b0f786e8aa6c15300e
+_
+/src/main/java/challenges/HumanReadableTime.java,7\b\7b496580bd3e63977c741160896c3d1bc35f7824
+c
+3src/test/java/challenges/HumanReadableTimeTest.java,1\4\148e313f30acfe74b056d1c17ffe8f7f92bdf8cd
+b
+2src/test/java/challenges/ValidParenthesesTest.java,1\5\157e399129264b235e796638855c3140ec9b00ed
+^
+.src/main/java/challenges/ValidParentheses.java,e\a\ea2c8cac100db49a44eaccdcabd5212a9f4c2f32
