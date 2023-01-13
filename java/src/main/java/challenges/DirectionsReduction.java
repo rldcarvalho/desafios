@@ -42,6 +42,8 @@ The Clojure version returns nil when the path is reduced to nothing.
 The Rust version takes a slice of enum Direction {North, East, West, South}.
  */
 
+import java.util.Stack;
+
 public class DirectionsReduction {
 
     public static String[] dirReduc(String[] arr) {
@@ -58,5 +60,35 @@ public class DirectionsReduction {
         }
 
         return string.length() > 0 ? string.toString().trim().split(" ") : new String[]{};
+    }
+
+    public static String[] dirReducBestPractices(String[] arr) {
+        Stack<String> stack = new Stack<>();
+
+        for (String direction:arr) {
+            String lastElement = stack.size() > 0 ? stack.lastElement() : null;
+
+            switch (direction){
+                case "NORTH":
+                    if ("SOUTH".equals(lastElement)) stack.pop();
+                    else stack.push(direction);
+                    break;
+                case "SOUTH":
+                    if ("NORTH".equals(lastElement)) stack.pop();
+                    else stack.push(direction);
+                    break;
+                case "EAST":
+                    if ("WEST".equals(lastElement)) stack.pop();
+                    else stack.push(direction);
+                    break;
+                case "WEST":
+                    if ("EAST".equals(lastElement)) stack.pop();
+                    else stack.push(direction);
+                    break;
+            }
+        }
+
+        return stack.toArray(new String[0]);
+
     }
 }
